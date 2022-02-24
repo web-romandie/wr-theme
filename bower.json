@@ -1,0 +1,19 @@
+{
+  "name": "wr-theme",
+  "homepage": "https://github.com/web-romandie/4swissrelocation",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/libraries",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

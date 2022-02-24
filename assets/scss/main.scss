@@ -1,0 +1,358 @@
+/*!
+ * Bootstrap v5.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+// scss-docs-start import-stack
+// Configuration
+@import "../libraries/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here: https://getbootstrap.com/docs/5.0/customize/sass
+// Options
+$enable-caret: true;
+$enable-rounded: true;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-reduced-motion: true;
+$enable-smooth-scroll: true;
+$enable-grid-classes: true;
+$enable-button-pointers: true;
+$enable-rfs: true;
+$enable-validation-icons: true;
+$enable-negative-margins: false;
+$enable-deprecation-messages: true;
+$enable-important-utilities: true;
+
+$spacer: 1rem;
+
+// Grayscale vars
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Color vars
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+
+// Fonts
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+$font-family-serif: Georgia, "Times New Roman", Times, serif;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base: $font-family-sans-serif;
+
+$link-decoration: none;
+
+@import "../libraries/bootstrap/scss/variables";
+@import "../libraries/bootstrap/scss/mixins";
+@import "../libraries/bootstrap/scss/utilities";
+
+// Layout & components
+@import "../libraries/bootstrap/scss/root";
+@import "../libraries/bootstrap/scss/reboot";
+@import "../libraries/bootstrap/scss/type";
+@import "../libraries/bootstrap/scss/images";
+@import "../libraries/bootstrap/scss/containers";
+@import "../libraries/bootstrap/scss/grid";
+@import "../libraries/bootstrap/scss/tables";
+@import "../libraries/bootstrap/scss/forms";
+@import "../libraries/bootstrap/scss/buttons";
+@import "../libraries/bootstrap/scss/transitions";
+@import "../libraries/bootstrap/scss/dropdown";
+@import "../libraries/bootstrap/scss/button-group";
+@import "../libraries/bootstrap/scss/nav";
+@import "../libraries/bootstrap/scss/navbar";
+@import "../libraries/bootstrap/scss/card";
+@import "../libraries/bootstrap/scss/accordion";
+@import "../libraries/bootstrap/scss/breadcrumb";
+@import "../libraries/bootstrap/scss/pagination";
+@import "../libraries/bootstrap/scss/badge";
+@import "../libraries/bootstrap/scss/alert";
+@import "../libraries/bootstrap/scss/progress";
+@import "../libraries/bootstrap/scss/list-group";
+@import "../libraries/bootstrap/scss/close";
+@import "../libraries/bootstrap/scss/toasts";
+@import "../libraries/bootstrap/scss/modal";
+@import "../libraries/bootstrap/scss/tooltip";
+@import "../libraries/bootstrap/scss/popover";
+@import "../libraries/bootstrap/scss/carousel";
+@import "../libraries/bootstrap/scss/spinners";
+@import "../libraries/bootstrap/scss/offcanvas";
+@import "../libraries/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../libraries/bootstrap/scss/helpers";
+
+// Utilities
+@import "../libraries/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+// My files
+@import 'common';
+@import 'header';
+@import 'footer';
+
+/**
+ * General
+ */
+
+img {
+    vertical-align: middle;
+}
+
+
+/**
+ * WordPress customization
+ */
+
+/* If WP-Adminbar is visible */
+body.admin-bar {
+    #header.fixed-top {
+        top: 32px;
+    }
+
+    .edit-link a {
+        color: #fff !important;
+        font-weight: normal !important;
+        text-decoration: none !important;
+
+        &::before {
+            content: '\270E';
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+}
+
+/* WordPress Embeds */
+
+.post-thumbnail,
+.wp-video,
+.embed-responsive {
+    margin: 5px 0;
+    width: 100% !important;
+}
+
+.post,
+.post-thumbnail {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Header */
+
+#header {
+    .search-form {
+        min-width: 250px;
+    }
+}
+
+.navbar-brand {
+    img {
+        height: 40px;
+    }
+}
+
+.navbar-static-top {
+    margin-bottom: $grid-gutter-width;
+}
+
+/* Main */
+
+#main {
+    margin-top: $spacer;
+}
+
+/* Footer */
+
+#footer {
+    background-color: #fff;
+
+    p {
+        margin-top: 10px;
+    }
+
+    .menu-item {
+        a {
+            &[aria-current='page'] {
+                color: $link-hover-color;
+            }
+        }
+    }
+}
+
+/* Sidebar */
+
+.widget-area {
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+/* Author */
+
+.author-avatar {
+    .avatar {
+        width: 64px;
+        height: auto;
+    }
+}
+
+.author-info {
+    margin: 40px 0;
+
+    h2,
+    h3 {
+        margin-top: 0;
+    }
+}
+
+/* Posts */
+
+.sticky {
+    .card {
+        background-color: $gray-100;
+    }
+}
+
+.entry-meta {
+    font-size: small;
+    margin-top: ($grid-gutter-width * .5);
+}
+
+.single {
+    .entry-content,
+    .post-navigation,
+    #comments-title {
+        margin: $grid-gutter-width 0;
+    }
+}
+
+#comments {
+    margin-top: $grid-gutter-width;
+}
+
+.comment-meta {
+    height: 40px;
+}
+
+.comment-reply-title {
+    margin: $grid-gutter-width 0 ($grid-gutter-width * .5);
+}
+
+.commentlist {
+    list-style: none;
+    margin: 0 auto;
+    width: 68.9%;
+
+    > li.comment {
+        margin: 0 0 1.625em;
+        padding: 1.625em;
+        position: relative;
+    }
+
+    .children {
+        list-style: none;
+        margin-top: $grid-gutter-width;
+
+        > li.comment {
+            border-top: 1px solid $gray-300;
+            padding-top: $grid-gutter-width;
+            position: relative;
+        }
+    }
+
+    .avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        box-shadow: 0 1px 2px $gray-600;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: -102px;
+    }
+}
+
+/* WordPress Blocks */
+
+// Buttons
+
+.wp-block-button {
+    &.is-style-outline {
+        .wp-block-button__link {
+            @extend .btn;
+            @extend .btn-outline-primary;
+        }
+    }
+
+    &.btn-lg {
+        .wp-block-button__link {
+            @extend .btn-lg;
+        }
+    }
+    &.btn-sm {
+        .wp-block-button__link {
+            @extend .btn-sm;
+        }
+    }
+
+    .wp-block-button__link {
+        @extend .btn;
+        @extend .btn-primary;
+        text-decoration: none;
+    }
+}
+
+// Table
+
+.wp-block-table {
+    td,
+    th {
+        border: inherit;
+    }
+
+    table {
+        @extend .table;
+    }
+}
+
+// Image, Media and Text
+
+.wp-block-image,
+.wp-block-media-text__media {
+    img,
+    video {
+        height: auto;
+    }
+}
+
+
+/**
+ * Responsive Design using "mixins/_breakpoints.scss"
+ */
+
+@media (max-width: breakpoint-max(sm)) {
+    #sidebar {
+        margin-top: 60px;
+    }
+}

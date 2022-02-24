@@ -1,0 +1,6 @@
+# Node packages
+node_modules
+
+assets/libraries/bootstrap/*
+!assets/libraries/bootstrap/scss
+!assets/libraries/bootstrap/dist
