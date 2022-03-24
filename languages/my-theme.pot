@@ -386,47 +386,47 @@ msgstr ""
 msgid "Parent post"
 msgstr ""
 
-#: inc/customizer.php:37
+#: templates/customizer.php:37
 msgid "Upload Header Logo"
 msgstr ""
 
-#: inc/customizer.php:38
+#: templates/customizer.php:38
 msgid "Height: &gt;80px"
 msgstr ""
 
-#: inc/customizer.php:51
+#: templates/customizer.php:51
 msgid "Navbar Scheme"
 msgstr ""
 
-#: inc/customizer.php:54
+#: templates/customizer.php:54
 msgid "Default"
 msgstr ""
 
-#: inc/customizer.php:55
+#: templates/customizer.php:55
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:56
+#: templates/customizer.php:56
 msgid "Primary"
 msgstr ""
 
-#: inc/customizer.php:69
+#: templates/customizer.php:69
 msgid "Navbar"
 msgstr ""
 
-#: inc/customizer.php:72
+#: templates/customizer.php:72
 msgid "Static"
 msgstr ""
 
-#: inc/customizer.php:73
+#: templates/customizer.php:73
 msgid "Fixed to top"
 msgstr ""
 
-#: inc/customizer.php:74
+#: templates/customizer.php:74
 msgid "Fixed to bottom"
 msgstr ""
 
-#: inc/customizer.php:87
+#: templates/customizer.php:87
 msgid "Show Searchfield?"
 msgstr ""
 
