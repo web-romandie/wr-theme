@@ -210,7 +210,7 @@ if (!function_exists('wr_theme_content_nav')) :
                 <div><?php next_posts_link('<span aria-hidden="true">&larr;</span> ' . esc_html__('Older posts', 'wr-theme')); ?></div>
                 <div><?php previous_posts_link(esc_html__('Newer posts', 'wr-theme') . ' <span aria-hidden="true">&rarr;</span>'); ?></div>
             </div><!-- /.d-flex -->
-            <?php
+        <?php
         else :
             echo '<div class="clearfix"></div>';
         endif;

@@ -25,7 +25,7 @@
                     endif;
                     ?>
                 </div><!-- /.entry-meta -->
-                <?php
+            <?php
             endif;
             ?>
         </header>

@@ -9,7 +9,7 @@ if (is_single() || is_archive()) :
     ?>
 
     </div><!-- /.row -->
-    <?php
+<?php
 endif;
 ?>
 </main><!-- /#main -->
@@ -50,11 +50,11 @@ endif;
                         ?>
                         <span class="edit-link"><a href="<?php echo esc_url(admin_url('widgets.php')); ?>"
                                                    class="badge badge-secondary"><?php esc_html_e('Edit', 'wr-theme'); ?></a></span><!-- Show Edit Widget link -->
-                        <?php
+                    <?php
                     endif;
                     ?>
                 </div>
-                <?php
+            <?php
             endif;
             ?>
         </div><!-- /.row -->

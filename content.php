@@ -18,7 +18,7 @@
                 </h2>
                 <h3 class="entry-format"><?php esc_html_e('Featured', 'wr-theme'); ?></h3>
             </hgroup>
-            <?php
+        <?php
         else :
             ?>
             <h2 class="entry-title">
@@ -26,7 +26,7 @@
                    title="<?php printf(esc_attr__('Permalink to %s', 'wr-theme'), the_title_attribute('echo=0')); ?>"
                    rel="bookmark"><?php the_title(); ?></a>
             </h2>
-            <?php
+        <?php
         endif;
 
         if ('post' === get_post_type()) :
@@ -34,7 +34,7 @@
             <div class="entry-meta">
                 <?php wr_theme_article_posted_on(); ?>
             </div><!-- /.entry-meta -->
-            <?php
+        <?php
         endif;
         ?>
     </header><!-- /.entry-header -->
@@ -45,14 +45,14 @@
         <div class="entry-summary">
             <?php the_excerpt(); ?>
         </div><!-- /.entry-summary -->
-        <?php
+    <?php
     else :
         ?>
         <div class="entry-content">
             <?php the_content(__('Continue reading <span class="meta-nav">&rarr;</span>', 'wr-theme')); ?>
             <?php wp_link_pages(array('before' => '<div class="page-link"><span>' . __('Pages:', 'wr-theme') . '</span>', 'after' => '</div>')); ?>
         </div><!-- /.entry-content -->
-        <?php
+    <?php
     endif;
     ?>
 
@@ -70,7 +70,7 @@
                         $show_sep = true;
                         ?>
                     </span>
-                <?php
+            <?php
             endif;
 
             /* translators: used between list items, there is a space after the comma */
@@ -79,7 +79,7 @@
                 if ($show_sep) :
                     ?>
                     <span class="sep"> | </span>
-                    <?php
+                <?php
                 endif;
                 ?>
                 <span class="tag-links">
@@ -88,7 +88,7 @@
                         $show_sep = true;
                         ?>
                     </span>
-                <?php
+            <?php
             endif;
         endif;
 
@@ -96,7 +96,7 @@
             if ($show_sep) :
                 ?>
                 <span class="sep"> | </span>
-                <?php
+            <?php
             endif;
             ?>
             <span class="comments-link">
@@ -107,7 +107,7 @@
                 );
                 ?>
             </span>
-            <?php
+        <?php
         endif;
         ?>
 

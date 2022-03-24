@@ -14,7 +14,7 @@
             <div class="entry-meta">
                 <?php wr_theme_article_posted_on(); ?>
             </div><!-- /.entry-meta -->
-            <?php
+        <?php
         endif;
         ?>
     </header><!-- /.entry-header -->

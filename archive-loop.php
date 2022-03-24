@@ -21,7 +21,7 @@ if (have_posts()) :
         endwhile;
         ?>
     </div>
-    <?php
+<?php
 endif;
 
 wp_reset_postdata();

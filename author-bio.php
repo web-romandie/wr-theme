@@ -7,7 +7,7 @@ if (get_the_author_meta('description')) :
     ?>
     <div class="author-info<?php if (!is_single()) :
         ?> bg-faded<?php
-                           endif; ?>">
+    endif; ?>">
         <div class="row">
             <div class="col-sm-12">
                 <h2>
@@ -61,6 +61,6 @@ if (get_the_author_meta('description')) :
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.author-info -->
-    <?php
+<?php
 endif;
 ?>

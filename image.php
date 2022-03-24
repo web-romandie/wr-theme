@@ -34,7 +34,7 @@ get_header();
                                             the_excerpt();
                                             ?>
                                         </div><!-- /.entry-caption -->
-                                        <?php
+                                    <?php
                                     endif;
                                     ?>
                                 </div><!-- /.entry-attachment -->

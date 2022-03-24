@@ -17,11 +17,11 @@ if (is_active_sidebar('primary_widget_area') || is_archive() || is_single()) :
                     ?>
                     <span class="edit-link"><a href="<?php echo esc_url(admin_url('widgets.php')); ?>"
                                                class="badge badge-secondary"><?php esc_html_e('Edit', 'wr-theme'); ?></a></span><!-- Show Edit Widget link -->
-                    <?php
+                <?php
                 endif;
                 ?>
             </div><!-- /.widget-area -->
-            <?php
+        <?php
         endif;
 
         if (is_archive() || is_single()) :
@@ -64,16 +64,16 @@ if (is_active_sidebar('primary_widget_area') || is_archive() || is_single()) :
                             <li>&nbsp;</li>
                             <li><a href="<?php echo esc_url(get_the_permalink(get_option('page_for_posts'))); ?>"
                                    class="btn btn-outline-secondary"><?php esc_html_e('more', 'wr-theme'); ?></a></li>
-                            <?php
+                        <?php
                         endif;
                         ?>
                     </ul>
                 </div><!-- /#primary-two -->
             </div>
-            <?php
+        <?php
         endif;
         ?>
     </div><!-- /#sidebar -->
-    <?php
+<?php
 endif;
 ?>

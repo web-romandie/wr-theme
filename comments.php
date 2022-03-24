@@ -21,7 +21,7 @@ if (post_password_required()) {
             esc_html_e('No Comments yet!', 'wr-theme');
             ?>
         </h2>
-        <?php
+    <?php
     endif;
 
     if (have_comments()) :
@@ -55,7 +55,7 @@ if (post_password_required()) {
                 <div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'wr-theme')); ?></div>
                 <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'wr-theme')); ?></div>
             </nav>
-            <?php
+        <?php
         endif;
         ?>
         <ol class="commentlist">
@@ -78,7 +78,7 @@ if (post_password_required()) {
                 <div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'wr-theme')); ?></div>
                 <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'wr-theme')); ?></div>
             </nav>
-            <?php
+        <?php
         endif;
 
     /**
@@ -88,7 +88,7 @@ if (post_password_required()) {
     elseif (!comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) :
         ?>
         <h2 id="comments-title" class="nocomments"><?php esc_html_e('Comments are closed.', 'wr-theme'); ?></h2>
-        <?php
+    <?php
     endif;
 
     // Show Comment Form (customized in functions.php).

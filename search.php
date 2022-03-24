@@ -23,7 +23,7 @@ else :
         get_search_form();
         ?>
     </article><!-- /#post-0 -->
-    <?php
+<?php
 endif;
 wp_reset_postdata();
 
