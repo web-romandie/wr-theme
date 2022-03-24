@@ -5,7 +5,7 @@
  *
  * @since v1.0
  */
-$theme_customizer = get_template_directory() . '/templates/customizer.php';
+$theme_customizer = get_template_directory() . '/utils/customizer.php';
 if (is_readable($theme_customizer)) {
     require_once $theme_customizer;
 }
