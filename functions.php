@@ -10,7 +10,6 @@ if (is_readable($theme_customizer)) {
     require_once $theme_customizer;
 }
 
-
 /**
  * Include Support for wordpress.com-specific functions.
  *
@@ -21,7 +20,6 @@ if (is_readable($theme_wordpresscom)) {
     require_once $theme_wordpresscom;
 }
 
-
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
@@ -30,7 +28,6 @@ if (is_readable($theme_wordpresscom)) {
 if (!isset($content_width)) {
     $content_width = 800;
 }
-
 
 /**
  * General Theme Settings.
@@ -86,7 +83,6 @@ if (!function_exists('wr_theme_setup_theme')) :
     remove_action('enqueue_block_editor_assets', 'gutenberg_enqueue_block_editor_assets_block_directory');
 endif;
 
-
 /**
  * Fire the wp_body_open action.
  *
@@ -105,7 +101,6 @@ if (!function_exists('wp_body_open')) :
         do_action('wp_body_open');
     }
 endif;
-
 
 /**
  * Add new User fields to Userprofile.
@@ -128,7 +123,6 @@ if (!function_exists('wr_theme_add_user_fields')) :
     add_filter('user_contactmethods', 'wr_theme_add_user_fields'); // get_user_meta( $user->ID, 'facebook_profile', true );
 endif;
 
-
 /**
  * Test if a page is a blog page.
  * if ( is_blog() ) { ... }
@@ -142,7 +136,6 @@ function is_blog()
 
     return ((is_archive() || is_author() || is_category() || is_home() || is_single() || (is_tag() && ('post' === $posttype))) ? true : false);
 }
-
 
 /**
  * Disable comments for Media (Image-Post, Jetpack-Carousel, etc.)
@@ -159,7 +152,6 @@ function wr_theme_filter_media_comment_status($open, $post_id = null)
 }
 
 add_filter('comments_open', 'wr_theme_filter_media_comment_status', 10, 2);
-
 
 /**
  * Style Edit buttons as badges: https://getbootstrap.com/docs/5.0/components/badge
@@ -179,7 +171,6 @@ function wr_theme_custom_edit_comment_link($output)
 }
 
 add_filter('edit_comment_link', 'wr_theme_custom_edit_comment_link');
-
 
 /**
  * Responsive oEmbed filter: https://getbootstrap.com/docs/5.0/helpers/ratio
@@ -225,7 +216,6 @@ if (!function_exists('wr_theme_content_nav')) :
     add_filter('next_posts_link_attributes', 'posts_link_attributes');
     add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 endif;
-
 
 /**
  * Init Widget areas in Sidebar.
@@ -294,7 +284,6 @@ if (!function_exists('wr_theme_article_posted_on')) :
         );
     }
 endif;
-
 
 /**
  * Template for Password protected post form.
@@ -477,7 +466,6 @@ if (!function_exists('wr_theme_comment')) :
     add_filter('comment_form_defaults', 'wr_theme_custom_commentform');
 endif;
 
-
 /**
  * Nav menus.
  *
@@ -502,7 +490,6 @@ $custom_walker_footer = get_template_directory() . '/templates/wp_bootstrap_navw
 if (is_readable($custom_walker_footer)) {
     require_once $custom_walker_footer;
 }
-
 
 /**
  * Loading All CSS Stylesheets and Javascript Files.
