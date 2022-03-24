@@ -1,6 +1,10 @@
+# System files
+.idea
+
 # Node packages
 node_modules
 
+# Assets
 assets/libraries/bootstrap/*
 !assets/libraries/bootstrap/scss
 !assets/libraries/bootstrap/dist
