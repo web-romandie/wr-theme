@@ -2,6 +2,7 @@
 /**
  * Template Name: Page with sidebar
  * Description: Page template with Sidebar on the left side.
+ * Template Post Type: page
  */
 
 get_header();
