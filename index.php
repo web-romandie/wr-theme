@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blog Index
+ * Template Name: Standard page (default)
  * Description: The template for displaying the Blog index /blog.
  *
  */
