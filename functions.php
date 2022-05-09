@@ -155,35 +155,22 @@ add_filter('comments_open', 'wr_theme_filter_media_comment_status', 10, 2);
 
 /**
  * Style Edit buttons as badges: https://getbootstrap.com/docs/5.0/components/badge
- *
- * @since v1.0
  */
-function wr_theme_custom_edit_post_link($output)
-{
+add_filter('edit_post_link', function ($output) {
     return str_replace('class="post-edit-link"', 'class="post-edit-link badge badge-secondary"', $output);
-}
+});
 
-add_filter('edit_post_link', 'wr_theme_custom_edit_post_link');
-
-function wr_theme_custom_edit_comment_link($output)
-{
+add_filter('edit_comment_link', function ($output) {
     return str_replace('class="comment-edit-link"', 'class="comment-edit-link badge badge-secondary"', $output);
-}
-
-add_filter('edit_comment_link', 'wr_theme_custom_edit_comment_link');
+});
 
 /**
  * Responsive oEmbed filter: https://getbootstrap.com/docs/5.0/helpers/ratio
- *
- * @since v1.0
  */
-function wr_theme_oembed_filter($html)
-{
+
+add_filter('embed_oembed_html', function ($html) {
     return '<div class="ratio ratio-16x9">' . $html . '</div>';
-}
-
-add_filter('embed_oembed_html', 'wr_theme_oembed_filter', 10, 4);
-
+}, 10, 4);
 
 if (!function_exists('wr_theme_content_nav')) :
     /**
@@ -219,11 +206,9 @@ endif;
 
 /**
  * Init Widget areas in Sidebar.
- *
- * @since v1.0
  */
-function wr_theme_widgets_init()
-{
+
+add_action('widgets_init', function () {
     // Area 1.
     register_sidebar(
         array(
@@ -259,9 +244,7 @@ function wr_theme_widgets_init()
             'after_title' => '</h3>',
         )
     );
-}
-
-add_action('widgets_init', 'wr_theme_widgets_init');
+});
 
 
 if (!function_exists('wr_theme_article_posted_on')) :
@@ -287,11 +270,8 @@ endif;
 
 /**
  * Template for Password protected post form.
- *
- * @since v1.0
  */
-function wr_theme_password_form()
-{
+add_filter('the_password_form', function () {
     global $post;
     $label = 'pwbox-' . (empty($post->ID) ? rand() : $post->ID);
 
@@ -307,9 +287,7 @@ function wr_theme_password_form()
     $output .= '</form>';
     $output .= '</div><!-- /.row -->';
     return $output;
-}
-
-add_filter('the_password_form', 'wr_theme_password_form');
+});
 
 
 if (!function_exists('wr_theme_comment')) :
@@ -404,8 +382,7 @@ if (!function_exists('wr_theme_comment')) :
      * @since v1.1: Added 'submit_button' and 'submit_field'
      * @since v2.0.2: Added '$consent' and 'cookies'
      */
-    function wr_theme_custom_commentform($args = array(), $post_id = null)
-    {
+    add_filter('comment_form_defaults', function ($args = array(), $post_id = null) {
         if (null === $post_id) {
             $post_id = get_the_ID();
         }
@@ -461,9 +438,7 @@ if (!function_exists('wr_theme_comment')) :
         );
 
         return $defaults;
-    }
-
-    add_filter('comment_form_defaults', 'wr_theme_custom_commentform');
+    });
 endif;
 
 /**
@@ -491,13 +466,7 @@ if (is_readable($custom_walker_footer)) {
     require_once $custom_walker_footer;
 }
 
-/**
- * Loading All CSS Stylesheets and Javascript Files.
- *
- * @since v1.0
- */
-function wr_theme_scripts_loader()
-{
+add_action('wp_enqueue_scripts', function () {
     $theme_version = wp_get_theme()->get('Version');
 
     // 1. Styles.
@@ -510,6 +479,4 @@ function wr_theme_scripts_loader()
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
-}
-
-add_action('wp_enqueue_scripts', 'wr_theme_scripts_loader');
+});
